@@ -60,3 +60,27 @@ Excludes sensitive fields (e.g., password) from API responses.
 Uses HTTPS for secure data transmission.
 
 Applied strict access control on all endpoints.
+
+### Setup
+
+```bash
+# download the sdk on root
+curl -s "https://get.sdkman.io" | bash
+
+source ~/.sdkman/bin/sdkman-init.sh 
+
+# install springboot
+sdk install springboot             
+
+# for the purpose of project creation use the command below
+# create project 
+spring init --build=maven --java-version=21 --dependencies=web lets-play
+
+cd lets-play
+
+# run the project
+mvn spring-boot:run 
+```
+
+Alternatively use the [spring initializer](https://start.spring.io/)
+
