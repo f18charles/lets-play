@@ -1,4 +1,4 @@
-package com.example.lets_play.exception;
+package com.example.lets_play.common.exception;
 
 public class DuplicateResourceException extends RuntimeException {
     public DuplicateResourceException(String message) {
