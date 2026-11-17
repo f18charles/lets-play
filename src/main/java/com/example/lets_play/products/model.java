@@ -1,4 +1,4 @@
-package com.example.lets_play.model;
+package com.example.lets_play.products;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
