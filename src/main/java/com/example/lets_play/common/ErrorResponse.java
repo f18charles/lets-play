@@ -1,4 +1,4 @@
-package com.example.lets_play.utils;
+package com.example.lets_play.common;
 
 import java.time.Instant;
 
