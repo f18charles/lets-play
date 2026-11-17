@@ -1,10 +1,9 @@
-package com.example.lets_play.users;
+package com.example.lets_play.users.models;
 
+import com.example.lets_play.users.models.Role;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-public enum Role { USER, ADMIN }
 
 @Document(collection = "users")
 public class User{

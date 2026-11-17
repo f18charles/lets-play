@@ -1,5 +1,6 @@
 package com.example.lets_play.users;
 
+import com.example.lets_play.users.models.User;
 import org.springframework.data.mongodb.repository.Mongorepository;
 import java.util.Optional;
 
