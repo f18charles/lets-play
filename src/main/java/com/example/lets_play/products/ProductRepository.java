@@ -1,6 +1,5 @@
 package com.example.lets_play.products;
 
-import com.example.lets_play.products.Product;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 
