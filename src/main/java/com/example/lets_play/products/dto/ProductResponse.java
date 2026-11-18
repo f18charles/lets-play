@@ -1,6 +1,5 @@
 package com.example.lets_play.products.dto;
 
-import jakarta.validation.constraints.*;
 import com.example.lets_play.products.Product;
 
 public record ProductResponse(String id, String name, String description, Double price, String userId) {

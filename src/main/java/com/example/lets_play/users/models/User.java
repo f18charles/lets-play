@@ -1,6 +1,5 @@
 package com.example.lets_play.users.models;
 
-import com.example.lets_play.users.models.Role;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -24,7 +23,7 @@ public class User{
         this.role = role;
     }
 
-    public void setId(string id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -32,7 +31,7 @@ public class User{
         return id;
     }
 
-    public void setName(string name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -40,7 +39,7 @@ public class User{
         return name;
     }
     
-    public void setEmail(string email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -52,11 +51,11 @@ public class User{
         this.role = role;
     }
 
-    public String getRole() {
+    public Role getRole() {
         return role;
     }
     
-    public void setPassword(string password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
