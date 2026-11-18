@@ -1,6 +1,5 @@
 package com.example.lets_play.users.models;
 
-import com.example.lets_play.users.models.Role;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
