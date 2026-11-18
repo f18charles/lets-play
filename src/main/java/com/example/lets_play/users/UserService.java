@@ -28,7 +28,7 @@ public class UserService {
         if (users.existsByEmail(email)) {
             throw new DuplicateResourceException("Email is already registered");
         }
-        User user = new User(req.name(), email, encoder.encode(req.password()), Role.User);
+        User user = new User(req.name(), email, encoder.encode(req.password()), Role.USER);
         try {
             return users.save(user);
         } catch (DuplicateKeyException e) {

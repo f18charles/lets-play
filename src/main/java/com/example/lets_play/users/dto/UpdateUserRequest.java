@@ -8,4 +8,4 @@ public record UpdateUserRequest(
     @NotBlank @Email @Size(max = 254) String email,
     @Size(min = 8, max = 72) String password,
     Role role
-)
+) {}
