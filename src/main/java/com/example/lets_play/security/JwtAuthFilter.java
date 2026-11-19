@@ -36,7 +36,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                     var auth = new UsernamePasswordAuthenticationToken(principal, null, List.of(new SimpleGrantedAuthority("ROLE_"+u.getRole().name())));
                     SecurityContextHolder.getContext().setAuthentication(auth);
                 });
-            } catch (JwtException | IllegalStateException e) {
+            } catch (JwtException | IllegalArgumentException e) {
                 // Invalid or expired token: stay unauthenticated
                 // Protected endpoints will answer 401 via the entry point
             }
