@@ -1,10 +1,11 @@
-package com.example.lets_play.users;
+package com.example.lets_play.users.services;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.example.lets_play.common.exception.AuthenticationFailedException;
 import com.example.lets_play.security.JWTService;
+import com.example.lets_play.users.UserRepository;
 import com.example.lets_play.users.dto.AuthResponse;
 import com.example.lets_play.users.dto.LoginRequest;
 import com.example.lets_play.users.models.User;
