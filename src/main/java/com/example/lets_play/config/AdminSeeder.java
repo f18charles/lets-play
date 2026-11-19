@@ -5,11 +5,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
 import com.example.lets_play.users.UserRepository;
 import com.example.lets_play.users.models.Role;
 import com.example.lets_play.users.models.User;
 
+@Component 
 public class AdminSeeder implements CommandLineRunner{
     private static final Logger log = LoggerFactory.getLogger(AdminSeeder.class);
     private final UserRepository users;
