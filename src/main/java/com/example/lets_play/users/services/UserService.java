@@ -1,5 +1,6 @@
-package com.example.lets_play.users;
+package com.example.lets_play.users.services;
 
+import com.example.lets_play.users.UserRepository;
 import com.example.lets_play.users.dto.*;
 import com.example.lets_play.common.exception.*;
 import com.example.lets_play.users.models.*;
