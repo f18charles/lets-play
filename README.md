@@ -31,11 +31,13 @@ role-based access (USER / ADMIN), BCrypt password hashing, HTTPS, CORS and rate 
 
 2. **HTTPS certificate** (self-signed, development only):
    ```bash
+   export SSL_KEYSTORE_PASSWORD=changeit
    keytool -genkeypair -alias letsplay -keyalg RSA -keysize 2048 -storetype PKCS12 \
      -keystore keystore.p12 -validity 365 \
      -storepass "$SSL_KEYSTORE_PASSWORD" -keypass "$SSL_KEYSTORE_PASSWORD" \
      -dname "CN=localhost" -ext "SAN=dns:localhost,ip:127.0.0.1"
    ```
+   > **Note:** The password must be at least 6 characters (`keytool` requirement). If you change it, also update your `.env` or pass it when running: `SSL_KEYSTORE_PASSWORD=yourpass ./mvnw spring-boot:run`
 3. **MongoDB.** Use Atlas (put its connection string in `MONGODB_URI`), or run local Mongo.
    The test suite needs a local Mongo:
    ```bash
