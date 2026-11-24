@@ -29,7 +29,12 @@ role-based access (USER / ADMIN), BCrypt password hashing, HTTPS, CORS and rate 
    | `SSL_KEYSTORE` | Keystore location | `file:./keystore.p12` |
    | `CORS_ORIGINS` | Comma-separated browser origins allowed to call the API | `https://localhost:3000` |
 
-2. **HTTPS certificate** (self-signed, development only):
+2. **JWT secret** (required — app refuses to start without it):
+   ```bash
+   export JWT_SECRET=$(openssl rand -hex 32)
+   ```
+
+3. **HTTPS certificate** (self-signed, development only):
    ```bash
    export SSL_KEYSTORE_PASSWORD=changeit
    keytool -genkeypair -alias letsplay -keyalg RSA -keysize 2048 -storetype PKCS12 \
