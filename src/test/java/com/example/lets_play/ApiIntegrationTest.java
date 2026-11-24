@@ -25,14 +25,17 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(
     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,
     properties = {
-		"spring.mongodb.uri=${MONGODB_URI_TEST:mongodb://localhost:27017/letsplay_test}",
-		"spring.data.mongodb.auto-index-creation=true",
-		"server.ssl.enabled=false",
-		"app.jwt.secret=test-secret-test-secret-test-secret-123456",
-		"app.jwt.expiration-ms=3600000",
-		"app.admin.email=",
-		"app.admin.password="
-	})
+        "spring.mongodb.uri=${MONGODB_URI_TEST:mongodb://localhost:27017/letsplay_test}",
+        "spring.data.mongodb.auto-index-creation=true",
+        "server.ssl.enabled=false",
+        "app.jwt.secret=test-secret-test-secret-test-secret-123456",
+        "app.jwt.expiration-ms=3600000",
+        "app.admin.email=",
+        "app.admin.password=",
+        "app.rate-limit.auth-per-minute=100000",
+        "app.rate-limit.general-per-minute=100000",
+        "app.cors.allowed-origins=https://localhost:3000"
+    })
 class ApiIntegrationTest {
 
     record Resp(int status, String body) {}
